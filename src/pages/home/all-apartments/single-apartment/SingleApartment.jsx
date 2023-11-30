@@ -41,7 +41,7 @@ const SingleApartment = ({ item }) => {
     date: formattedDate,
   };
   const handleAgreement = () => {
-    // fetch('http://localhost:5000/agreements', {
+    // fetch('https://facility-minder-server.vercel.app/agreements', {
     //   method: 'POST',
     //   headers: {
     //     'content-type': 'application/json',

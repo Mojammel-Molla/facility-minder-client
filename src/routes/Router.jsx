@@ -30,7 +30,11 @@ const Router = createBrowserRouter([
       },
       {
         path: '/all-agreements',
-        element: <AllAgreements />,
+        element: (
+          <PrivateRoute>
+            <AllAgreements />
+          </PrivateRoute>
+        ),
       },
       {
         path: '/apartments/:id',
@@ -41,7 +45,9 @@ const Router = createBrowserRouter([
         ),
 
         loader: async ({ params }) =>
-          await fetch(`http://localhost:5000/apartments/${params.id}`),
+          await fetch(
+            `https://facility-minder-server.vercel.app/apartments/${params.id}`
+          ),
       },
     ],
   },
