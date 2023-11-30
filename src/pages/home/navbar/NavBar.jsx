@@ -1,23 +1,44 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import UserImg from '../../../assets/userImage.jpg';
 import LogoImg from '../../../assets//building-logo2.png';
+import { useContext } from 'react';
+import { AuthContext } from '../../../providers/AuthProvider';
 const NavBar = () => {
+  const { user, logOutUser } = useContext(AuthContext);
   const navLinks = (
     <>
       <NavLink
         to="/"
-        className={({ isActive }) => (isActive ? 'text-[#08a8e4]' : '')}
+        className={({ isActive }) =>
+          isActive ? 'text-[#08a8e4] underline' : ''
+        }
       >
         <li className="mr-3 font-semibold">Home</li>
       </NavLink>
-      <NavLink>
-        <li className="mr-3 font-semibold">Booking</li>
+      <NavLink
+        to="/all-agreements"
+        className={({ isActive }) =>
+          isActive ? 'text-[#08a8e4] underline' : ''
+        }
+      >
+        <li className="mr-3 font-semibold">All Apartments</li>
       </NavLink>
       <NavLink>
-        <li className="mr-3 font-semibold">Rent</li>
+        <li className="mr-3 font-semibold">Rented</li>
+      </NavLink>
+      <NavLink
+        to="/dashboard"
+        className={({ isActive }) =>
+          isActive ? 'text-[#08a8e4] underline' : ''
+        }
+      >
+        <li className="mr-3 font-semibold">Dashboard</li>
       </NavLink>
     </>
   );
+  const handleLogOut = () => {
+    return logOutUser();
+  };
   return (
     <div className="navbar bg-base-100 border-b-2 ">
       <div className="navbar-start">
@@ -40,7 +61,7 @@ const NavBar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navLinks}
           </ul>
@@ -50,31 +71,72 @@ const NavBar = () => {
           <a className="font-bold text-xl">Facility Minder</a>
         </div>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
-      <div className="navbar-end items-end menu">
-        <div className="dropdown ">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
+      {/* <div className="navbar-end dropdown items-end menu">
+        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+          <div className="w-10 rounded-full">
+            <img alt="Tailwind CSS Navbar component" src={UserImg} />
+          </div>
+        </label>
+        <ul
+          tabIndex={0}
+          className="btn-ghost menu menu-horizontal z-10 overflow-clip   dropdown-content  mt-3 shadow bg-base-100 rounded-box"
+        >
+          <Link>
+            <li>Profile</li>
+          </Link>
+          <Link>
+            <li>Dash</li>
+          </Link>
+          <Link>
+            <li>Login</li>
+          </Link>
+        </ul>
+      </div> */}
+      <div className="dropdown dropdown-end items-end">
+        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+          <div className="w-10 rounded-full">
+            {user ? (
+              <img src={user?.photoURL} alt="" />
+            ) : (
               <img alt="Tailwind CSS Navbar component" src={UserImg} />
-            </div>
-          </label>
-          <ul
-            tabIndex={0}
-            className="btn-ghost  z-10 overflow-clip   dropdown-content  mt-3 shadow bg-base-100 rounded-box"
-          >
+            )}
+          </div>
+        </label>
+        <ul
+          tabIndex={0}
+          className="menu absolute menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52"
+        >
+          <Link>
+            {user ? (
+              <li>
+                <button>{user?.displayName}</button>
+              </li>
+            ) : (
+              <li>
+                <button>Profile</button>
+              </li>
+            )}
+          </Link>
+          <Link>
             <li>
-              <a className="">Profile</a>
+              <button>Setting</button>
             </li>
-            <li>
-              <a>Dash</a>
-            </li>
-            <li>
-              <a>Logout</a>
-            </li>
-          </ul>
-        </div>
+          </Link>
+          <Link to="/register">
+            {user ? (
+              <li>
+                <button onClick={handleLogOut}>Log out</button>
+              </li>
+            ) : (
+              <li>
+                <button>Log in</button>
+              </li>
+            )}
+          </Link>
+        </ul>
       </div>
     </div>
   );

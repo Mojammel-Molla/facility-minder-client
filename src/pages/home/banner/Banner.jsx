@@ -11,48 +11,50 @@ import ApartmentImg5 from '../../../assets/apartment5.png';
 import ApartmentImg6 from '../../../assets/apartment6.jpg';
 const Banner = () => {
   return (
-    <div className="">
-      <div className="w-1/2 mx-auto">
+    <>
+      <div className="w-1/2 mx-auto my-3">
         <input
           type="text"
           placeholder="Type here"
           className="input input-bordered input-info w-full "
         />
       </div>
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper "
-      >
-        <SwiperSlide>
-          <img className="w-full lg:h-[716px]" src={ApartmentImg1} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="w-full lg:h-[716px]" src={ApartmentImg2} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="w-full lg:h-[716px]" src={ApartmentImg3} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="w-full lg:h-[716px]" src={ApartmentImg4} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="w-full lg:h-[716px]" src={ApartmentImg5} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="w-full lg:h-[716px]" src={ApartmentImg6} alt="" />
-        </SwiperSlide>
-      </Swiper>
-    </div>
+      <div className="mt-5">
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper "
+        >
+          <SwiperSlide>
+            <img className="w-full lg:h-[716px]" src={ApartmentImg1} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="w-full lg:h-[716px]" src={ApartmentImg2} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="w-full lg:h-[716px]" src={ApartmentImg3} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="w-full lg:h-[716px]" src={ApartmentImg4} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="w-full lg:h-[716px]" src={ApartmentImg5} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="w-full lg:h-[716px]" src={ApartmentImg6} alt="" />
+          </SwiperSlide>
+        </Swiper>
+      </div>
+    </>
   );
 };
 
