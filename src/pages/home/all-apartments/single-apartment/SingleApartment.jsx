@@ -1,15 +1,15 @@
 import { useContext } from 'react';
 import { FaBed, FaLocationDot } from 'react-icons/fa6';
-import { Link } from 'react-router-dom';
+
 import { AuthContext } from '../../../../providers/AuthProvider';
 import useAxiosSecure from '../../../../hooks/useAxiosSecure';
+import { useNavigate } from 'react-router-dom';
 
 const SingleApartment = ({ item }) => {
   const { user } = useContext(AuthContext);
   const axiosSecure = useAxiosSecure();
-
+  const navigate = useNavigate();
   const {
-    _id,
     apartmentImage,
     floorNo,
     blockName,
@@ -41,7 +41,8 @@ const SingleApartment = ({ item }) => {
     date: formattedDate,
   };
   const handleAgreement = () => {
-    // fetch('https://facility-minder-server.vercel.app/agreements', {
+    // fetch('
+    //localhost:5000/agreements', {
     //   method: 'POST',
     //   headers: {
     //     'content-type': 'application/json',
@@ -56,12 +57,16 @@ const SingleApartment = ({ item }) => {
     //     }
     //   });
 
-    axiosSecure.post('/agreements', agreement).then(res => {
-      console.log(res.data);
-      if (res.data.insertedId) {
-        alert('Your agreement has been taken');
-      }
-    });
+    http: if (user) {
+      axiosSecure.post('/agreements', agreement).then(res => {
+        console.log(res.data);
+        if (res.data.insertedId) {
+          alert('Your agreement has been taken');
+        }
+      });
+    } else {
+      navigate('/login');
+    }
   };
   return (
     <div className="card w-96 h-96 bg-base-100 shadow-xl">
@@ -102,12 +107,12 @@ const SingleApartment = ({ item }) => {
           </p>
         </div>
 
-        <div className="card-actions flex justify-between pt-1">
-          <Link to={`/apartments/${_id}`}>
+        <div className="card-actions flex justify-center pt-1">
+          {/* <Link to={`/apartments/${_id}`}>
             <button className="btn text-white bg-[#08a8e4] ">
               View Details
             </button>
-          </Link>
+          </Link> */}
           <button
             onClick={handleAgreement}
             className="btn text-white bg-[#08a8e4] "

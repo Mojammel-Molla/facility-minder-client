@@ -1,7 +1,8 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import isAdmin from '../../dashboard/admin-dashboard/isAdmin';
 
 const DashboardLayout = () => {
-  const isAdmin = true;
+  const userinfo = isAdmin();
   return (
     <div className="flex">
       <div className="w-60 min-h-screen bg-[#08a8e4] text-white">
@@ -53,16 +54,16 @@ const DashboardLayout = () => {
               Payments history
             </NavLink>
           </li>
-          {/* <li>
+          <li>
             <NavLink
               className={({ isActive }) =>
                 isActive ? 'text-black underline' : ''
               }
-              to="/dashboard/member-profile"
+              to="/dashboard/complaint"
             >
-              Member Profile
+              Make Complaint
             </NavLink>
-          </li> */}
+          </li>
           <li>
             <NavLink to="/dashboard/manage-users">Manage users</NavLink>
           </li>

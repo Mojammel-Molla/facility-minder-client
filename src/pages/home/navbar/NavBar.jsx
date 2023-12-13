@@ -16,16 +16,16 @@ const NavBar = () => {
         <li className="mr-3 font-semibold">Home</li>
       </NavLink>
       <NavLink
-        to="/all-agreements"
+        to="/all-apartments"
         className={({ isActive }) =>
           isActive ? 'text-[#08a8e4] underline' : ''
         }
       >
         <li className="mr-3 font-semibold">All Apartments</li>
       </NavLink>
-      <NavLink>
+      {/* <NavLink>
         <li className="mr-3 font-semibold">Rented</li>
-      </NavLink>
+      </NavLink> */}
       <NavLink
         to="/dashboard"
         className={({ isActive }) =>

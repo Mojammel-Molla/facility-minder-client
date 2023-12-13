@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
+import { useNavigate } from 'react-router-dom';
 
 const CheckoutForm = () => {
   const [error, setError] = useState('');
@@ -10,6 +11,7 @@ const CheckoutForm = () => {
   const [transactionId, setTransactionId] = useState('');
   const stripe = useStripe();
   const elements = useElements();
+  const navigate = useNavigate();
 
   const axiosSecure = useAxiosSecure();
   const { user } = useContext(AuthContext);
@@ -36,6 +38,7 @@ const CheckoutForm = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
+
     if (!stripe || !elements) {
       return;
     }
@@ -83,6 +86,7 @@ const CheckoutForm = () => {
         const res = await axiosSecure.post('/payments', payment);
         console.log('Payment saved', res);
         alert('payment successful');
+        navigate('/');
       }
     }
   };

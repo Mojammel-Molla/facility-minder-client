@@ -3,7 +3,6 @@ import MainLayOut from '../layouts/main/MainLayOut';
 import Home from '../pages/home/home/Home';
 import Register from '../pages/register/Register';
 import Login from '../pages/log-in/Login';
-import AllAgreements from '../pages/all-agreements/AllAgreements';
 import PrivateRoute from './PrivateRoute';
 import ApartmentDetails from '../pages/home/apartment-details/ApartmentDetails';
 import DashboardLayout from '../layouts/dashboard-layout/DashboardLayout';
@@ -17,6 +16,10 @@ import MemberProfile from '../dashboard/member-dashboard/MemberProfile';
 import MakePayment from '../dashboard/member-dashboard/MakePayment';
 import Payment from '../dashboard/payment/Payment';
 import MembersPayment from './../dashboard/admin-dashboard/manage-users/MembersPayment';
+import AllApartments from '../pages/view-all-apartments/AllApartments';
+import Complaint from '../dashboard/member-dashboard/Complaint';
+// import PaymentsHistory from '../dashboard/member-dashboard/PaymentsHistory';
+// import AdminRoute from './AdminRoute';
 
 const Router = createBrowserRouter([
   {
@@ -29,13 +32,21 @@ const Router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/all-agreements',
+        path: '/all-apartments',
         element: (
           <PrivateRoute>
-            <AllAgreements />
+            <AllApartments />
           </PrivateRoute>
         ),
       },
+      // {
+      //   path: '/all-agreements',
+      //   element: (
+      //     <PrivateRoute>
+      //       <AllAgreements />
+      //     </PrivateRoute>
+      //   ),
+      // },
       {
         path: '/apartments/:id',
         element: (
@@ -61,7 +72,11 @@ const Router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <DashboardLayout />,
+    element: (
+      <PrivateRoute>
+        <DashboardLayout />
+      </PrivateRoute>
+    ),
     children: [
       {
         path: 'announcements',
@@ -88,8 +103,8 @@ const Router = createBrowserRouter([
         element: <ManageUsers />,
       },
       {
-        path: 'member-profile',
-        element: <MemberProfile />,
+        path: 'complaint',
+        element: <Complaint />,
       },
       {
         path: 'member-payment',
@@ -103,6 +118,10 @@ const Router = createBrowserRouter([
         path: 'payment',
         element: <Payment />,
       },
+      // {
+      //   path: 'payments-history',
+      //   element: <PaymentsHistory />,
+      // },
     ],
   },
 ]);
