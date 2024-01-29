@@ -13,7 +13,7 @@ const NavBar = () => {
           isActive ? 'text-[#08a8e4] underline' : ''
         }
       >
-        <li className="mr-3 font-semibold">Home</li>
+        <li>Home</li>
       </NavLink>
       <NavLink
         to="/all-apartments"
@@ -21,18 +21,21 @@ const NavBar = () => {
           isActive ? 'text-[#08a8e4] underline' : ''
         }
       >
-        <li className="mr-3 font-semibold">All Apartments</li>
+        <li>All Apartments</li>
       </NavLink>
-      {/* <NavLink>
+      <NavLink>
         <li className="mr-3 font-semibold">Rented</li>
-      </NavLink> */}
+      </NavLink>
+      <NavLink>
+        <li className="mr-3 font-semibold">My Bookings</li>
+      </NavLink>
       <NavLink
         to="/dashboard"
         className={({ isActive }) =>
           isActive ? 'text-[#08a8e4] underline' : ''
         }
       >
-        <li className="mr-3 font-semibold">Dashboard</li>
+        <li>Dashboard</li>
       </NavLink>
     </>
   );
@@ -68,11 +71,15 @@ const NavBar = () => {
         </div>
         <div>
           <img className="w-24 h-10 rounded-sm mx-auto" src={LogoImg} alt="" />
-          <a className="font-bold text-xl">Facility Minder</a>
+          <a className="font-bold text-xl">
+            Facility <span className="text-main">Minder</span>
+          </a>
         </div>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+        <ul className="menu menu-horizontal px-1 gap-5 font-semibold mr-3">
+          {navLinks}
+        </ul>
       </div>
       {/* <div className="navbar-end dropdown items-end menu">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -116,13 +123,13 @@ const NavBar = () => {
               </li>
             ) : (
               <li>
-                <button>Profile</button>
+                <button>My Profile</button>
               </li>
             )}
           </Link>
           <Link>
             <li>
-              <button>Setting</button>
+              <button>Dashboard</button>
             </li>
           </Link>
           <Link to="/register">

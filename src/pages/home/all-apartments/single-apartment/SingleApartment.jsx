@@ -57,7 +57,7 @@ const SingleApartment = ({ item }) => {
     //     }
     //   });
 
-    http: if (user) {
+    if (user) {
       axiosSecure.post('/agreements', agreement).then(res => {
         console.log(res.data);
         if (res.data.insertedId) {
