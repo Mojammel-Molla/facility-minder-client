@@ -35,22 +35,22 @@ const Banner = () => {
           className="mySwiper "
         >
           <SwiperSlide>
-            <img className="w-full lg:h-[716px]" src={ApartmentImg1} alt="" />
+            <img className="w-full lg:h-[816px]" src={ApartmentImg1} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-full lg:h-[716px]" src={ApartmentImg2} alt="" />
+            <img className="w-full lg:h-[816px]" src={ApartmentImg2} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-full lg:h-[716px]" src={ApartmentImg3} alt="" />
+            <img className="w-full lg:h-[816px]" src={ApartmentImg3} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-full lg:h-[716px]" src={ApartmentImg4} alt="" />
+            <img className="w-full lg:h-[816px]" src={ApartmentImg4} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-full lg:h-[716px]" src={ApartmentImg5} alt="" />
+            <img className="w-full lg:h-[816px]" src={ApartmentImg5} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-full lg:h-[716px]" src={ApartmentImg6} alt="" />
+            <img className="w-full lg:h-[816px]" src={ApartmentImg6} alt="" />
           </SwiperSlide>
         </Swiper>
       </div>
