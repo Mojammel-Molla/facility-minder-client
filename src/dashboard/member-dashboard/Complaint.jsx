@@ -47,7 +47,7 @@ const Complaint = () => {
             name="name"
             defaultValue={user?.displayName}
             type="text"
-            placeholder="Name"
+            readOnly
             className="input input-bordered"
             required
           />
@@ -60,7 +60,7 @@ const Complaint = () => {
             name="email"
             defaultValue={user?.email}
             type="email"
-            placeholder="email"
+            readOnly
             className="input input-bordered"
             required
           />
@@ -73,6 +73,7 @@ const Complaint = () => {
             name="massage"
             className="textarea textarea-info"
             placeholder="Write here"
+            required
           ></textarea>
         </div>
         <div className="form-control mt-6">

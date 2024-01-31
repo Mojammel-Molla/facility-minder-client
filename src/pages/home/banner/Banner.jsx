@@ -15,7 +15,7 @@ const Banner = () => {
   };
   return (
     <>
-      <form className="w-1/2 mx-auto my-3">
+      <form className="w-1/3 flex gap-3 mx-auto my-3">
         <input
           type="text"
           name="search"
@@ -23,6 +23,7 @@ const Banner = () => {
           className="input input-bordered input-info w-full "
           onChange={handleChange}
         />
+        <button className="btn bg-main text-white">Search</button>
       </form>
       <div className="mt-5">
         <Swiper

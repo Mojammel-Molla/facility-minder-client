@@ -3,13 +3,14 @@ import { FaBed, FaLocationDot } from 'react-icons/fa6';
 
 import { AuthContext } from '../../../../providers/AuthProvider';
 import useAxiosSecure from '../../../../hooks/useAxiosSecure';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SingleApartment = ({ item }) => {
   const { user } = useContext(AuthContext);
   const axiosSecure = useAxiosSecure();
   const navigate = useNavigate();
   const {
+    _id,
     apartmentImage,
     floorNo,
     blockName,
@@ -69,7 +70,7 @@ const SingleApartment = ({ item }) => {
     }
   };
   return (
-    <div className="card w-96 h-96 bg-base-100 shadow-xl">
+    <div className="card w-80 h-96 bg-base-100 shadow-xl">
       {/* <figure> */}
       <img
         className="h-44 w-96 rounded-t-lg"
@@ -108,17 +109,17 @@ const SingleApartment = ({ item }) => {
         </div>
 
         <div className="card-actions flex justify-center pt-1">
-          {/* <Link to={`/apartments/${_id}`}>
-            <button className="btn text-white bg-[#08a8e4] ">
+          <Link to={`/apartments/${_id}`}>
+            <button className="btn text-white bg-[#08a8e4] hover:bg-blue-500">
               View Details
             </button>
-          </Link> */}
-          <button
+          </Link>
+          {/* <button
             onClick={handleAgreement}
             className="btn text-white bg-[#08a8e4] "
           >
             Agreement
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

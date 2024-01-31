@@ -82,7 +82,7 @@ const Coupon = () => {
           variant="contained"
           color="primary"
           className="mt-3"
-          style={{ width: '50%' }}
+          style={{ width: '20%' }}
           align="center"
         >
           {couponData}

@@ -4,6 +4,7 @@ import AreaTitle from '../../shared/area-title/AreaTitle';
 import SingleApartment from '../home/all-apartments/single-apartment/SingleApartment';
 import { useQuery } from '@tanstack/react-query';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
+import { Helmet } from 'react-helmet-async';
 
 const AllApartments = () => {
   // const [apartments] = UseApartment();
@@ -37,9 +38,12 @@ const AllApartments = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Facility Minder || All Apartments</title>
+      </Helmet>
       <div className="mt-20">
         <AreaTitle title="Our all apartments in your area.."></AreaTitle>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5 max-w-[1620px] mx-auto ">
           {result?.map(item => (
             <SingleApartment key={item.id} item={item}></SingleApartment>
           ))}

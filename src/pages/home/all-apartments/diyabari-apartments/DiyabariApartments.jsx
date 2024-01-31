@@ -10,9 +10,9 @@ const DiyabariApartments = () => {
 
   return (
     <div className="">
-      <AreaTitle title="Our apartments in Diyabari area.."></AreaTitle>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
-        {filteredApartment?.slice(0, 6).map(item => (
+      <AreaTitle title="Apartments in Diyabari"></AreaTitle>
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5 max-w-[1620px] mx-auto">
+        {filteredApartment?.slice(0, 4).map(item => (
           <SingleApartment key={item.id} item={item}></SingleApartment>
         ))}
       </div>
