@@ -13,7 +13,7 @@ import BannerImage4 from '../../../assets/detail-banner4.jpg';
 const DetailBanner = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(' ');
   return (
-    <div className="w-1/3">
+    <div className="w-1/2">
       <Swiper
         style={{
           '--swiper-navigation-color': '#fff',
@@ -27,16 +27,16 @@ const DetailBanner = () => {
         className="mySwiper2"
       >
         <SwiperSlide>
-          <img src={BannerImage1} />
+          <img className="w-full" src={BannerImage1} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={BannerImage2} />
+          <img className="w-full" src={BannerImage2} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={BannerImage3} />
+          <img className="w-full" src={BannerImage3} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={BannerImage4} />
+          <img className="w-full" src={BannerImage4} />
         </SwiperSlide>
       </Swiper>
       <Swiper

@@ -1,6 +1,8 @@
 import { FaBed, FaLocationDot } from 'react-icons/fa6';
 import { Link, useLoaderData } from 'react-router-dom';
 import DetailBanner from './DetailBanner';
+import { Helmet } from 'react-helmet-async';
+import ReviewArea from './ReviewArea';
 const ApartmentDetails = () => {
   const viewApartment = useLoaderData();
 
@@ -19,11 +21,14 @@ const ApartmentDetails = () => {
 
   return (
     <div className="">
+      <Helmet>
+        <title>Facility Minder || Apartment Details</title>
+      </Helmet>
       <div className="hero min-h-[70vh] bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src={apartmentImage}
-            className="max-w-md rounded-lg shadow-2xl"
+            className="max-w-md rounded-lg md:w-full md:h-full  sm:w-80 sm:h-80 shadow-2xl"
           />
           <div className="w-1/2 space-y-3">
             <h1 className="text-3xl font-bold">{apartmentName}</h1>
@@ -31,7 +36,10 @@ const ApartmentDetails = () => {
             <div className="max-w-md space-y-3">
               <div className="flex justify-between">
                 <p>
-                  Area: <span className="font-semibold ">{area}</span>
+                  Area:{' '}
+                  <span className="font-semibold ">
+                    {area} <FaLocationDot />{' '}
+                  </span>
                 </p>
                 <p>
                   Block: <span className="font-bold ">{blockName}</span>
@@ -59,7 +67,7 @@ const ApartmentDetails = () => {
             <p className="py-6">
               Description:<span className="font-semibold">{description}</span>
             </p>
-            <div className="card-actions justify-start pt-1">
+            <div className="card-actions justify-center pt-1">
               <Link>
                 <button className="btn text-white bg-[#08a8e4] ">
                   Make Agreement
@@ -70,7 +78,10 @@ const ApartmentDetails = () => {
         </div>
       </div>
 
-      <DetailBanner></DetailBanner>
+      <div className="md:flex justify-between my-10">
+        <DetailBanner></DetailBanner>
+        <ReviewArea></ReviewArea>
+      </div>
     </div>
   );
 };
