@@ -24,10 +24,17 @@ const NavBar = () => {
         <li>All Apartments</li>
       </NavLink>
       <NavLink>
-        <li className="mr-3 font-semibold">Rented</li>
+        <li className="mr-3 font-semibold">My Reservation</li>
       </NavLink>
       <NavLink>
-        <li className="mr-3 font-semibold">My Bookings</li>
+        <li className="mr-3 font-semibold">Contact Us</li>
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? 'text-[#08a8e4] underline' : ''
+        }
+      >
+        <li>About Us</li>
       </NavLink>
       <NavLink
         to="/dashboard"
