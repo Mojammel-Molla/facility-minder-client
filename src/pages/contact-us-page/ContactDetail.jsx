@@ -2,7 +2,7 @@ import { SlCallOut } from 'react-icons/sl';
 
 const ContactDetail = () => {
   return (
-    <div className="w-1/2 text-center my-10 space-y-2">
+    <div className="w-2/3 text-center my-10 space-y-2">
       <h1 className="text-4xl font-semibold">Contact Details</h1>
       <div>
         {/* <SlCallOut /> */}

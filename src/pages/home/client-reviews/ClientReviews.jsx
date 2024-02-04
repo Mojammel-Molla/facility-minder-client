@@ -28,7 +28,7 @@ const ClientReviews = () => {
       >
         {reviews?.map(review => (
           <SwiperSlide key={review._id}>
-            <div className="card w-96 h-72 bg-base-100 shadow-2xl cursor-grab my-3">
+            <div className="card lg:w-96 lg:h-72 bg-base-100 shadow-2xl cursor-grab my-3">
               <div className="card-body">
                 <img
                   className="h-10 w-10 rounded-full"

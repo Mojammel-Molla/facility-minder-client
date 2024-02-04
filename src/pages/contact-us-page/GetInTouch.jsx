@@ -1,6 +1,6 @@
 const GetInTouch = () => {
   return (
-    <div className="w-1/2">
+    <div className="w-full">
       <h1 className="md:text-4xl font-bold underline my-5 text-center">
         Get In Touch
       </h1>

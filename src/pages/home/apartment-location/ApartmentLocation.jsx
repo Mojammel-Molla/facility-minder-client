@@ -1,4 +1,5 @@
 import GoogleMapReact from 'google-map-react';
+import GetInTouch from '../../contact-us-page/GetInTouch';
 
 const ApartmentLocation = () => {
   const AnyReactComponent = ({ text }) => <div>{text}</div>;
@@ -12,9 +13,9 @@ const ApartmentLocation = () => {
   };
 
   return (
-    <div className="w-full flex">
-      <div className="w-1/2">
-        <h1>Contact Us</h1>
+    <div className="w-full lg:flex gap-5">
+      <div className="w-1/2 mx-auto">
+        <GetInTouch></GetInTouch>
       </div>
       <div className="my-5 w-1/2" style={{ height: '70vh', width: '100%' }}>
         <GoogleMapReact

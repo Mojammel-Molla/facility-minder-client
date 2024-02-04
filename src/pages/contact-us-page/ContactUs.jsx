@@ -1,4 +1,4 @@
-import SecondaryBanner from '../../shared/area-title/secondary-banner/SecondaryBanner';
+import SecondaryBanner from '../../shared/secondary-banner/SecondaryBanner';
 import ContactBanner from './ContactBanner';
 import ContactDetail from './ContactDetail';
 import GetInTouch from './GetInTouch';

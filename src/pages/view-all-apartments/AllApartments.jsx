@@ -5,7 +5,7 @@ import SingleApartment from '../home/all-apartments/single-apartment/SingleApart
 import { useQuery } from '@tanstack/react-query';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import { Helmet } from 'react-helmet-async';
-import SecondaryBanner from '../../shared/area-title/secondary-banner/SecondaryBanner';
+import SecondaryBanner from '../../shared/secondary-banner/SecondaryBanner';
 
 const AllApartments = () => {
   // const [apartments] = UseApartment();

@@ -19,6 +19,7 @@ import MembersPayment from './../dashboard/admin-dashboard/manage-users/MembersP
 import AllApartments from '../pages/view-all-apartments/AllApartments';
 import Complaint from '../dashboard/member-dashboard/Complaint';
 import ContactUs from '../pages/contact-us-page/ContactUs';
+import Blogs from '../pages/blog-page/Blogs';
 // import PaymentsHistory from '../dashboard/member-dashboard/PaymentsHistory';
 // import AdminRoute from './AdminRoute';
 
@@ -43,6 +44,10 @@ const Router = createBrowserRouter([
       {
         path: '/contact-us',
         element: <ContactUs />,
+      },
+      {
+        path: '/blogs',
+        element: <Blogs />,
       },
       {
         path: '/apartments/:id',

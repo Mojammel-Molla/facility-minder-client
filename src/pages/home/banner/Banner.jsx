@@ -15,7 +15,7 @@ const Banner = () => {
   };
   return (
     <>
-      <form className="w-1/3 flex gap-3 mx-auto my-3">
+      <form className="md:w-1/3 flex gap-3 mx-auto my-3">
         <input
           type="text"
           name="search"

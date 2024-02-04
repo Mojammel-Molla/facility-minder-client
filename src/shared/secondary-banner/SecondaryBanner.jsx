@@ -1,4 +1,4 @@
-import BannerImage from '../../.../../../assets/secondary-banner1.jpg';
+import BannerImage from '../../assets/secondary-banner1.jpg';
 const SecondaryBanner = ({ title }) => {
   return (
     <div
