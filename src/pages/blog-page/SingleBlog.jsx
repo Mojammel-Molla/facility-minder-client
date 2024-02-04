@@ -9,7 +9,7 @@ const SingleBlog = ({ blog }) => {
         <span>
           {blog.tags.map(tag => (
             <button
-              className="px-5 bg-main rounded-full font-bold mr-3"
+              className="px-5 py-1 bg-main rounded-full font-bold mr-3"
               key={tag}
             >
               {tag}

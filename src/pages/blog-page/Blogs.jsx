@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import SecondaryBanner from '../../shared/secondary-banner/SecondaryBanner';
 import useAxiosPublic from '../../hooks/useAxiosPublic';
 import SingleBlog from './SingleBlog';
+import BlogAction from './BlogAction';
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -16,7 +17,7 @@ const Blogs = () => {
   return (
     <>
       <SecondaryBanner title="Blogs"></SecondaryBanner>
-      <div className="flex ">
+      <div className="lg:flex ">
         <div className=" flex-1 ">
           {seeMore
             ? blogs
@@ -37,7 +38,9 @@ const Blogs = () => {
             </button>
           </div>
         </div>
-        <div className="w-96">Action part</div>
+        <div className="md:w-[600px]">
+          <BlogAction></BlogAction>
+        </div>
       </div>
     </>
   );
