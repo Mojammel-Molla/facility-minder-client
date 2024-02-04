@@ -18,6 +18,7 @@ import Payment from '../dashboard/payment/Payment';
 import MembersPayment from './../dashboard/admin-dashboard/manage-users/MembersPayment';
 import AllApartments from '../pages/view-all-apartments/AllApartments';
 import Complaint from '../dashboard/member-dashboard/Complaint';
+import ContactUs from '../pages/contact-us-page/ContactUs';
 // import PaymentsHistory from '../dashboard/member-dashboard/PaymentsHistory';
 // import AdminRoute from './AdminRoute';
 
@@ -39,14 +40,10 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      // {
-      //   path: '/all-agreements',
-      //   element: (
-      //     <PrivateRoute>
-      //       <AllAgreements />
-      //     </PrivateRoute>
-      //   ),
-      // },
+      {
+        path: '/contact-us',
+        element: <ContactUs />,
+      },
       {
         path: '/apartments/:id',
         element: (

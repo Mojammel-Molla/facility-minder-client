@@ -26,7 +26,12 @@ const NavBar = () => {
       <NavLink>
         <li className="mr-3 font-semibold">My Reservation</li>
       </NavLink>
-      <NavLink>
+      <NavLink
+        to="/contact-us"
+        className={({ isActive }) =>
+          isActive ? 'text-[#08a8e4] underline' : ''
+        }
+      >
         <li className="mr-3 font-semibold">Contact Us</li>
       </NavLink>
       <NavLink

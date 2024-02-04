@@ -4,6 +4,7 @@ export default {
   theme: {
     colors: {
       main: '#08a8e4',
+      white: 'ffffff',
     },
     extend: {},
   },

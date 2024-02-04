@@ -1,8 +1,8 @@
-const ReviewArea = () => {
+const GetInTouch = () => {
   return (
     <div className="w-1/2">
-      <h1 className="md:text-4xl font-bold underline my-2 text-center">
-        Your Valuable Feedback{' '}
+      <h1 className="md:text-4xl font-bold underline my-5 text-center">
+        Get In Touch
       </h1>
       <form className="card-body lg:w-2/3 mx-auto rounded-lg shadow-2xl">
         <div className="form-control">
@@ -42,7 +42,7 @@ const ReviewArea = () => {
         </div>
         <div className="form-control mt-6">
           <button type="submit" className="btn bg-main">
-            Submit
+            Submit Enquiry
           </button>
         </div>
       </form>
@@ -50,4 +50,4 @@ const ReviewArea = () => {
   );
 };
 
-export default ReviewArea;
+export default GetInTouch;
