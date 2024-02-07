@@ -1,10 +1,26 @@
+import useAxiosPublic from '../../../hooks/useAxiosPublic';
+
 const ReviewArea = () => {
+  const axios = useAxiosPublic();
+
+  const handleReviewSubmit = e => {
+    const newReview = {
+      email: e.target.email,
+      massage: e.target.massage,
+    };
+    axios.post('/reviews', newReview).then(res => {
+      console.log(res.data);
+    });
+  };
   return (
     <div className="w-1/2">
       <h1 className="md:text-4xl font-bold underline my-2 text-center">
         Your Valuable Feedback{' '}
       </h1>
-      <form className="card-body lg:w-2/3 mx-auto rounded-lg shadow-2xl">
+      <form
+        onSubmit={handleReviewSubmit}
+        className="card-body lg:w-2/3 mx-auto rounded-lg shadow-2xl"
+      >
         <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>
