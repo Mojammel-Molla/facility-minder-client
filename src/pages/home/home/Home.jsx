@@ -1,3 +1,4 @@
+import Achievements from '../achievements/Achivements';
 import BananiApartments from '../all-apartments/banani-apartments/BananiApartments';
 import DiyabariApartments from '../all-apartments/diyabari-apartments/DiyabariApartments';
 import GulshanApartments from '../all-apartments/gulshan-apartments/GulshanApartments';
@@ -20,6 +21,7 @@ const Home = () => {
       <DiyabariApartments></DiyabariApartments>
       <ClientReviews></ClientReviews>
       <ApartmentLocation></ApartmentLocation>
+      <Achievements></Achievements>
     </div>
   );
 };
