@@ -1,21 +1,21 @@
 const Achievements = () => {
   return (
     <div className="grid bg-[#08a8e4] h-[30vh] lg:grid-cols-4 gap-5">
-      <div>
-        <h1>1.2k Flats</h1>
-        <p>Sales Successfully</p>
+      <div className="shadow-xl text-center h-40 my-auto">
+        <h1 className="text-6xl font-bold">1.2k Flats</h1>
+        <p className="text-lg font-semibold">Sales Successfully</p>
       </div>
-      <div>
-        <h1>2000+</h1>
-        <p>Customers</p>
+      <div className="shadow-xl text-center h-40 my-auto">
+        <h1 className="text-6xl font-bold">2000+</h1>
+        <p className="text-lg font-semibold">Customers</p>
       </div>
-      <div>
-        <h1>200+</h1>
-        <p>Current Bookings</p>
+      <div className="shadow-xl text-center h-40 my-auto">
+        <h1 className="text-6xl font-bold">200+</h1>
+        <p className="text-lg font-semibold">Current Bookings</p>
       </div>
-      <div>
-        <h1>500+</h1>
-        <p>Construction Running</p>
+      <div className="shadow-xl text-center h-40 my-auto">
+        <h1 className="text-6xl font-bold">500+</h1>
+        <p className="text-lg font-semibold">Construction Running</p>
       </div>
     </div>
   );
