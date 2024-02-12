@@ -1,14 +1,6 @@
-import { useContext } from 'react';
 import { FaBed, FaLocationDot } from 'react-icons/fa6';
-
-import { AuthContext } from '../../../../providers/AuthProvider';
-import useAxiosSecure from '../../../../hooks/useAxiosSecure';
-import { Link, useNavigate } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 const SingleApartment = ({ item }) => {
-  const { user } = useContext(AuthContext);
-  const axiosSecure = useAxiosSecure();
-  const navigate = useNavigate();
   const {
     _id,
     apartmentImage,
@@ -21,54 +13,6 @@ const SingleApartment = ({ item }) => {
     apartmentName,
   } = item || {};
 
-  const currentDate = new Date();
-  const day = currentDate.getDate();
-  const month = currentDate.getMonth();
-  const year = currentDate.getFullYear();
-  const formattedDate = `${day}/${month}/${year}`;
-
-  const agreement = {
-    apartmentImage,
-    floorNo,
-    blockName,
-    apartmentNo,
-    rent,
-    area,
-    bedrooms,
-    apartmentName,
-    name: user?.displayname,
-    email: user?.email,
-    status: 'pending',
-    date: formattedDate,
-  };
-  const handleAgreement = () => {
-    // fetch('
-    //localhost:5000/agreements', {
-    //   method: 'POST',
-    //   headers: {
-    //     'content-type': 'application/json',
-    //   },
-    //   body: JSON.stringify(agreement),
-    // })
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     console.log(data);
-    //     if (data.insertedId) {
-    //       alert('Your agreement has been taken');
-    //     }
-    //   });
-
-    if (user) {
-      axiosSecure.post('/agreements', agreement).then(res => {
-        console.log(res.data);
-        if (res.data.insertedId) {
-          alert('Your agreement has been taken');
-        }
-      });
-    } else {
-      navigate('/login');
-    }
-  };
   return (
     <div className="card w-80 h-96 bg-base-100 shadow-xl">
       {/* <figure> */}

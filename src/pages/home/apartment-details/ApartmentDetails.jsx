@@ -1,14 +1,18 @@
 import { FaBed, FaLocationDot } from 'react-icons/fa6';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import DetailBanner from './DetailBanner';
 import { Helmet } from 'react-helmet-async';
 import ReviewArea from './ReviewArea';
+import useAxiosPublic from '../../../hooks/useAxiosPublic';
+import { useContext } from 'react';
+import { AuthContext } from '../../../providers/AuthProvider';
 const ApartmentDetails = () => {
   const viewApartment = useLoaderData();
-
+  const axios = useAxiosPublic();
+  const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
   const {
     apartmentImage,
-
     floorNo,
     blockName,
     apartmentNo,
@@ -19,6 +23,39 @@ const ApartmentDetails = () => {
     apartmentName,
   } = viewApartment || {};
 
+  const currentDate = new Date();
+  const day = currentDate.getDate();
+  const month = currentDate.getMonth();
+  const year = currentDate.getFullYear();
+  const formattedDate = `${day}/${month}/${year}`;
+
+  const agreement = {
+    apartmentImage,
+    floorNo,
+    blockName,
+    apartmentNo,
+    rent,
+    area,
+    bedrooms,
+    apartmentName,
+    name: user?.displayname,
+    email: user?.email,
+    status: 'pending',
+    date: formattedDate,
+  };
+
+  const handleAgreement = () => {
+    if (user) {
+      axios.post('/agreements', agreement).then(res => {
+        console.log(res.data);
+        if (res.data.insertedId) {
+          alert('Your agreement has been taken');
+        }
+      });
+    } else {
+      navigate('/login');
+    }
+  };
   return (
     <div className="">
       <Helmet>
@@ -69,7 +106,10 @@ const ApartmentDetails = () => {
             </p>
             <div className="card-actions justify-center pt-1">
               <Link>
-                <button className="btn text-white bg-[#08a8e4] ">
+                <button
+                  onClick={handleAgreement}
+                  className="btn text-white bg-[#08a8e4] "
+                >
                   Make Agreement
                 </button>
               </Link>

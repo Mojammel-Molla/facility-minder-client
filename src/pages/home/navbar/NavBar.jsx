@@ -23,9 +23,9 @@ const NavBar = () => {
       >
         <li>All Apartments</li>
       </NavLink>
-      <NavLink>
+      {/* <NavLink>
         <li className="mr-3 font-semibold">My Reservation</li>
-      </NavLink>
+      </NavLink> */}
       <NavLink
         to="/contact-us"
         className={({ isActive }) =>
