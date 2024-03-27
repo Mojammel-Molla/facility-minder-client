@@ -15,13 +15,12 @@ const SingleApartment = ({ item }) => {
 
   return (
     <div className="card w-80 h-96 bg-base-100 shadow-xl">
-      {/* <figure> */}
       <img
         className="h-44 w-96 rounded-t-lg"
         src={apartmentImage}
         alt="apartment"
       />
-      {/* </figure> */}
+
       <div className="card-body">
         <h2 className="card-title text-2xl font-semibold">
           <FaLocationDot /> {area}
