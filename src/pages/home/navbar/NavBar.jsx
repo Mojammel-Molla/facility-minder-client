@@ -43,7 +43,7 @@ const NavBar = () => {
         <li>Blogs</li>
       </NavLink>
       <NavLink
-        to="/dashboard"
+        to="/dashboard/user-profile"
         className={({ isActive }) =>
           isActive ? 'text-[#08a8e4] underline' : ''
         }
@@ -57,7 +57,7 @@ const NavBar = () => {
   };
   return (
     <div className="navbar bg-base-100 border-b-2 bg-fixed shadow-xl ">
-      <div className="navbar-start">
+      <div className="navbar-start w-full">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -77,7 +77,7 @@ const NavBar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm  dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navLinks}
           </ul>

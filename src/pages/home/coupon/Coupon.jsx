@@ -70,7 +70,7 @@ const Coupon = () => {
         <Typography
           variant="body1"
           component="p"
-          className="flex pt-3 font-bold"
+          className="flex  p-3 font-bold"
           align="center"
         >
           Coupon:

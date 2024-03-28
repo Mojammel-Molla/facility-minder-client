@@ -14,7 +14,7 @@ const SingleApartment = ({ item }) => {
   } = item || {};
 
   return (
-    <div className="card w-80 h-96 bg-base-100 shadow-xl">
+    <div className="card w-80 h-96 bg-base-100 shadow-xl mx-auto">
       <img
         className="h-44 w-96 rounded-t-lg"
         src={apartmentImage}

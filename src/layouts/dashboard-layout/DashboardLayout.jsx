@@ -6,14 +6,14 @@ const DashboardLayout = () => {
   return (
     <div className="flex">
       <div className="w-60 min-h-screen bg-[#08a8e4] text-white">
-        <ul className="p-4 font-medium space-y-4 text-lg">
+        <ul className="p-4 font-medium space-y-4 text-lg text-[#ffffff]">
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? 'text-black underline' : ''
+                isActive ? 'text-[#111] underline' : ''
               }
               to="/dashboard/user-profile"
             >
@@ -24,7 +24,7 @@ const DashboardLayout = () => {
             <li>
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? 'text-black underline' : ''
+                  isActive ? 'text-[#111]  underline' : ''
                 }
                 to="/dashboard/announcements"
               >
@@ -37,7 +37,7 @@ const DashboardLayout = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? 'text-black underline' : ''
+                isActive ? 'text-[#111]  underline' : ''
               }
               to="/dashboard/make-payment"
             >
@@ -47,7 +47,7 @@ const DashboardLayout = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? 'text-black underline' : ''
+                isActive ? 'text-[#111]  underline' : ''
               }
               to="/dashboard/member-payment"
             >
@@ -57,7 +57,7 @@ const DashboardLayout = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? 'text-black underline' : ''
+                isActive ? 'text-[#111]  underline' : ''
               }
               to="/dashboard/complaint"
             >
@@ -65,12 +65,19 @@ const DashboardLayout = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/dashboard/manage-users">Manage users</NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'text-[#111]  underline' : ''
+              }
+              to="/dashboard/manage-users"
+            >
+              Manage users
+            </NavLink>
           </li>
           <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? 'text-black underline' : ''
+                isActive ? 'text-[#111]  underline' : ''
               }
               to="/dashboard/make-announcements"
             >
@@ -80,7 +87,7 @@ const DashboardLayout = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? 'text-black underline' : ''
+                isActive ? 'text-[#111] underline' : ''
               }
               to="/dashboard/agreement-requests"
             >

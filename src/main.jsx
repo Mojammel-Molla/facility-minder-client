@@ -12,9 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <QueryClientProvider client={queryClient}>
       <HelmetProvider>
         <AuthProvider>
-          <div className=" md:mx-5">
-            <RouterProvider router={Router} />
-          </div>
+          <RouterProvider router={Router} />
         </AuthProvider>
       </HelmetProvider>
     </QueryClientProvider>
