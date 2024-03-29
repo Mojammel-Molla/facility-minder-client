@@ -41,7 +41,10 @@ const GetInTouch = () => {
           ></textarea>
         </div>
         <div className="form-control mt-6">
-          <button type="submit" className="btn bg-main">
+          <button
+            type="submit"
+            className="btn bg-main text-[#fff] hover:bg-[#1976d2]"
+          >
             Submit Enquiry
           </button>
         </div>

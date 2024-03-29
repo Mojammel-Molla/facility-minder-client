@@ -57,7 +57,10 @@ const ReviewArea = () => {
           ></textarea>
         </div>
         <div className="form-control mt-6">
-          <button type="submit" className="btn bg-main">
+          <button
+            type="submit"
+            className="btn text-[#fff] hover:bg-[#1976d2] bg-main"
+          >
             Submit
           </button>
         </div>

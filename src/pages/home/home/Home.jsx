@@ -7,6 +7,7 @@ import Banner from '../banner/Banner';
 import ClientReviews from '../client-reviews/ClientReviews';
 import Coupon from '../coupon/Coupon';
 import { Helmet } from 'react-helmet-async';
+import LoanFacility from '../loan-facility/LoanFacility';
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <GulshanApartments></GulshanApartments>
       <BananiApartments></BananiApartments>
       <DiyabariApartments></DiyabariApartments>
+      <LoanFacility></LoanFacility>
       <ClientReviews></ClientReviews>
       <ApartmentLocation></ApartmentLocation>
       <Achievements></Achievements>

@@ -6,8 +6,8 @@ const ApartmentLocation = () => {
 
   const defaultProps = {
     center: {
-      lat: 10.99835602,
-      lng: 77.01502627,
+      lat: 23.8041,
+      lng: 90.4152,
     },
     zoom: 11,
   };
@@ -23,7 +23,7 @@ const ApartmentLocation = () => {
           defaultCenter={defaultProps.center}
           defaultZoom={defaultProps.zoom}
         >
-          <AnyReactComponent lat={23.7937} lng={90.4066} text="My Marker" />
+          <AnyReactComponent lat={23.7937} lng={90.4066} text="My Location" />
         </GoogleMapReact>
       </div>
     </div>

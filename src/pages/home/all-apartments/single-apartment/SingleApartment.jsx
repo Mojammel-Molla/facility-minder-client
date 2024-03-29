@@ -53,7 +53,7 @@ const SingleApartment = ({ item }) => {
 
         <div className="card-actions flex justify-center pt-1">
           <Link to={`/apartments/${_id}`}>
-            <button className="btn text-white bg-[#08a8e4] hover:bg-blue-500">
+            <button className="btn text-[#fff] bg-[#08a8e4] hover:bg-[#1976d2]">
               View Details
             </button>
           </Link>

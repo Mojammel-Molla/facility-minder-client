@@ -2,7 +2,7 @@ import LogoImg from '../../../assets/building-logo2.png';
 const Footer = () => {
   return (
     <>
-      <footer className="footer p-10 bg-base-200 text-base-content">
+      <footer className="footer p-5 bg-base-200 text-base-content ">
         <aside>
           <div>
             <img
@@ -35,7 +35,7 @@ const Footer = () => {
           <a className="link link-hover">Cookie policy</a>
         </nav>
       </footer>
-      <footer className="footer footer-center p-4 bg-base-300 text-base-content">
+      <footer className="footer footer-center p-4 bg-base-100  text-base-content shadow-2xl">
         <aside className="font-bold">
           <p>Copyright © 2024 - All right reserved by Mojammel Molla</p>
         </aside>

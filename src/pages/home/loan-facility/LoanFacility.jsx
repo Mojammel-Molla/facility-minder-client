@@ -2,17 +2,33 @@ import LoanBanner from '../../../assets/loan-banner.jpg';
 const LoanFacility = () => {
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <img src={LoanBanner} className="max-w-sm rounded-lg shadow-2xl" />
-          <div>
-            <h1 className="text-5xl font-bold">Box Office News!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+      <div
+        style={{
+          backgroundImage:
+            'url(https://t3.ftcdn.net/jpg/03/40/79/60/360_F_340796093_arRYqCCyRv95ISY6oNA4zNSTUWyg9CQa.jpg)',
+          opacity: '90%',
+        }}
+        className="hero min-h-[70vh] "
+      >
+        <div className="hero-content flex-col lg:flex-row-reverse justify-between w-full text-[#fff]">
+          <img
+            src="https://img.freepik.com/free-photo/house-investments-elements-composition_23-2148793806.jpg"
+            className="max-w-lg rounded-lg shadow-2xl"
+          />
+          <div className="max-w-lg">
+            <h1 className="text-4xl font-bold">
+              Explore Our Hassle-Free Loan Solutions
+            </h1>
+            <p className="py-6 font-bold">
+              Discover convenient loan options tailored to your needs, ensuring
+              a smooth and stress-free process for financing your dream
+              apartment. With competitive rates and flexible terms, our loan
+              section offers the perfect solution to help you secure your ideal
+              living space hassle-free.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="px-5 py-3 text-[#ffff] bg-main rounded-full font-bold mr-3 hover:bg-[#1976d2]">
+              Get Started
+            </button>
           </div>
         </div>
       </div>

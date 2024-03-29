@@ -15,8 +15,10 @@ const ClientReviews = () => {
   console.log(reviews);
 
   return (
-    <div className="md:my-16">
-      <h1 className="text-4xl text-center font-bold my-5">Our Happy Clients</h1>
+    <div className="">
+      <h1 className=" text-2xl md:text-4xl text-center font-bold my-5">
+        Helps To Find Us
+      </h1>
       <Swiper
         slidesPerView={4}
         spaceBetween={0}

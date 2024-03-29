@@ -18,7 +18,9 @@ const DiyabariApartments = () => {
       </div>
       <div className=" text-center w-full mx-auto my-8">
         <Link to="/all-apartments">
-          <button className="btn  btn-outline">See All</button>
+          <button className="btn  btn-outline hover:bg-[#08a8e4]">
+            See All
+          </button>
         </Link>
       </div>
     </div>

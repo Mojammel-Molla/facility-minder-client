@@ -108,7 +108,7 @@ const ApartmentDetails = () => {
               <Link>
                 <button
                   onClick={handleAgreement}
-                  className="btn text-white bg-[#08a8e4] "
+                  className="btn text-[#fff] bg-[#08a8e4]  hover:bg-[#1976d2]"
                 >
                   Make Agreement
                 </button>
