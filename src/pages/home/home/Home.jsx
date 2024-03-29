@@ -8,6 +8,7 @@ import ClientReviews from '../client-reviews/ClientReviews';
 import Coupon from '../coupon/Coupon';
 import { Helmet } from 'react-helmet-async';
 import LoanFacility from '../loan-facility/LoanFacility';
+import Greetings from '../greetings/Greetings';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         <title>Facility Minder || Home</title>
       </Helmet>
       <Banner></Banner>
+      <Greetings></Greetings>
       <Coupon></Coupon>
       <GulshanApartments></GulshanApartments>
       <BananiApartments></BananiApartments>
