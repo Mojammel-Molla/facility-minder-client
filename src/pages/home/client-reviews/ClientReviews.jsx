@@ -15,9 +15,9 @@ const ClientReviews = () => {
   console.log(reviews);
 
   return (
-    <div className="">
-      <h1 className=" text-2xl md:text-4xl text-center font-bold my-5">
-        Helps To Find Us
+    <div className="bg-base-200">
+      <h1 className=" text-2xl md:text-4xl text-center font-bold py-5">
+        Honorable Clients
       </h1>
       <Swiper
         slidesPerView={4}

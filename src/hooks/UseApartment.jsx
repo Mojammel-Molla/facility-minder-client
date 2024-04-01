@@ -4,7 +4,7 @@ const UseApartment = () => {
   const [apartments, setApartments] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch('https://facility-minder-server.vercel.app/apartments')
+    fetch('http://localhost:5000/apartments')
       .then(res => res.json())
       .then(data => {
         setApartments(data);

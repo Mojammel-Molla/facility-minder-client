@@ -45,8 +45,7 @@ const AllApartments = () => {
       <SecondaryBanner title="All Apartments"></SecondaryBanner>
 
       <div className="mt-10">
-        <AreaTitle title="Our all apartments in your area.."></AreaTitle>
-        {/* <form className="w-1/3 flex gap-3 mx-auto my-10">
+        <form className="w-1/3 flex gap-3 mx-auto my-10">
           <input
             type="text"
             name="search"
@@ -54,8 +53,9 @@ const AllApartments = () => {
             className="input input-bordered input-info w-full "
             // onChange={handleChange}
           />
-          <button className="btn bg-main text-white">Search</button>
-        </form> */}
+          <button className="btn bg-main text-[white]">Search</button>
+        </form>
+        <AreaTitle title="Choose Your Dream Apartment"></AreaTitle>
         <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5 max-w-[1620px] mx-auto">
           {result?.map(item => (
             <SingleApartment key={item.id} item={item}></SingleApartment>

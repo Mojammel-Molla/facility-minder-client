@@ -9,17 +9,13 @@ const NavBar = () => {
     <>
       <NavLink
         to="/"
-        className={({ isActive }) =>
-          isActive ? 'text-[#08a8e4] underline' : ''
-        }
+        className={({ isActive }) => (isActive ? 'text-[#fff] underline' : '')}
       >
         <li>Home</li>
       </NavLink>
       <NavLink
         to="/all-apartments"
-        className={({ isActive }) =>
-          isActive ? 'text-[#08a8e4] underline' : ''
-        }
+        className={({ isActive }) => (isActive ? 'text-[#fff] underline' : '')}
       >
         <li>All Apartments</li>
       </NavLink>
@@ -28,24 +24,20 @@ const NavBar = () => {
       </NavLink> */}
       <NavLink
         to="/contact-us"
-        className={({ isActive }) =>
-          isActive ? 'text-[#08a8e4] underline' : ''
-        }
+        className={({ isActive }) => (isActive ? 'text-[#fff] underline' : '')}
       >
         <li className="mr-3 font-semibold">Contact Us</li>
       </NavLink>
       <NavLink
         to="/blogs"
-        className={({ isActive }) =>
-          isActive ? 'text-[#08a8e4] underline' : ''
-        }
+        className={({ isActive }) => (isActive ? 'text-[#fff] underline' : '')}
       >
         <li>Blogs</li>
       </NavLink>
       <NavLink
         to="/dashboard/user-profile"
         className={({ isActive }) =>
-          isActive ? 'text-[#08a8e4] underline' : ''
+          isActive ? 'text-[#101010] underline' : ''
         }
       >
         <li>Dashboard</li>
@@ -56,7 +48,7 @@ const NavBar = () => {
     return logOutUser();
   };
   return (
-    <div className="navbar bg-base-100 border-b-2 bg-fixed shadow-xl ">
+    <div className="navbar   fixed top-0 z-10 bg-transparent shadow-md md:px-5">
       <div className="navbar-start w-full">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -77,20 +69,20 @@ const NavBar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm  dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm  dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52 text-main"
           >
             {navLinks}
           </ul>
         </div>
         <div>
           <img className="w-24 h-10 rounded-sm mx-auto" src={LogoImg} alt="" />
-          <a className="font-bold text-xl">
+          <a className="font-bold text-xl text-[#fff]">
             Facility <span className="text-main">Minder</span>
           </a>
         </div>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-5 font-semibold mr-3">
+        <ul className="menu menu-horizontal px-1 gap-5 font-semibold mr-3 text-main">
           {navLinks}
         </ul>
       </div>

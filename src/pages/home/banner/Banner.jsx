@@ -25,12 +25,12 @@ const Banner = () => {
         />
         <button className="btn bg-main text-white">Search</button>
       </form> */}
-      <div className="mt-5">
+      <div className=" relative">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
-            delay: 2500,
+            delay: 3000,
             disableOnInteraction: false,
           }}
           pagination={{
@@ -41,16 +41,16 @@ const Banner = () => {
           className="mySwiper "
         >
           <SwiperSlide>
-            <img className="w-full lg:h-[816px]" src={BannerImg1} alt="" />
+            <img className="w-full lg:h-[100vh]" src={BannerImg1} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-full lg:h-[816px]" src={BannerImg2} alt="" />
+            <img className="w-full lg:h-[100vh]" src={BannerImg2} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-full lg:h-[816px]" src={BannerImg3} alt="" />
+            <img className="w-full lg:h-[100vh]" src={BannerImg3} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-full lg:h-[816px]" src={BannerImg4} alt="" />
+            <img className="w-full lg:h-[100vh]" src={BannerImg4} alt="" />
           </SwiperSlide>
         </Swiper>
       </div>

@@ -1,10 +1,13 @@
 import GreetingImage from '../../../assets/loan-banner.jpg';
 const Greetings = () => {
   return (
-    <div className="mt-2">
+    <div className="mt-1">
       <div className="hero min-h-[60vh] t bg-[#84c7e05a]">
         <div className="hero-content flex-col lg:flex-row-reverse justify-between w-full">
-          <img src={GreetingImage} className="max-w-sm rounded-lg shadow-2xl" />
+          <img
+            src={GreetingImage}
+            className="md:max-w-lg rounded-md shadow-2xl"
+          />
           <div className="max-w-xl">
             <h1 className="text-2xl md:text-4xl font-bold">
               Welcome Home to

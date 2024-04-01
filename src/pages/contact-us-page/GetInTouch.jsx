@@ -1,10 +1,10 @@
 const GetInTouch = () => {
   return (
     <div className="w-full">
-      <h1 className="md:text-4xl font-bold underline my-5 text-center">
+      <h1 className="md:text-3xl font-bold underline my-5 text-center">
         Get In Touch
       </h1>
-      <form className="card-body lg:w-2/3 mx-auto rounded-lg shadow-2xl">
+      <form className="card-body  lg:w-2/3 mx-auto rounded-lg shadow-2xl bg-[white]">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>

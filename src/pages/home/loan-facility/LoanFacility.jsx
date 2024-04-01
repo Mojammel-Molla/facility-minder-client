@@ -13,7 +13,7 @@ const LoanFacility = () => {
         <div className="hero-content flex-col lg:flex-row-reverse justify-between w-full text-[#fff]">
           <img
             src="https://img.freepik.com/free-photo/house-investments-elements-composition_23-2148793806.jpg"
-            className="max-w-lg rounded-lg shadow-2xl"
+            className="md:max-w-lg rounded-lg shadow-2xl"
           />
           <div className="max-w-lg">
             <h1 className="text-4xl font-bold">

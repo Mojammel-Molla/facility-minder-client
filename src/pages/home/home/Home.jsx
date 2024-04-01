@@ -9,6 +9,7 @@ import Coupon from '../coupon/Coupon';
 import { Helmet } from 'react-helmet-async';
 import LoanFacility from '../loan-facility/LoanFacility';
 import Greetings from '../greetings/Greetings';
+import WhyChooseUs from '../why-choose-us/WhyChooseUs';
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <BananiApartments></BananiApartments>
       <DiyabariApartments></DiyabariApartments>
       <LoanFacility></LoanFacility>
+      <WhyChooseUs></WhyChooseUs>
       <ClientReviews></ClientReviews>
       <ApartmentLocation></ApartmentLocation>
       <Achievements></Achievements>
